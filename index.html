@@ -3,20 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejemplo Web</title>
+    <title>Ejemplo Web Interactiva</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+    <header>
+        <h1>Bienvenido a Nuestra Página</h1>
+        <p>Explora nuestras secciones y conoce más sobre nosotros.</p>
+    </header>
+    
     <nav>
         <ul class="menu">
             <li><button onclick="mostrarSeccion('inicio')">Inicio</button></li>
             <li><button onclick="mostrarSeccion('nosotros')">Nosotros</button></li>
             <li><button onclick="mostrarSeccion('mision')">Misión</button></li>
             <li><button onclick="mostrarSeccion('vision')">Visión</button></li>
+            <li><button onclick="mostrarSeccion('servicios')">Servicios</button></li>
+            <li><button onclick="mostrarSeccion('testimonios')">Testimonios</button></li>
             <li><button onclick="mostrarSeccion('contacto')">Contacto</button></li>
             <li><button onclick="mostrarSeccion('ubicacion')">Ubicación</button></li>
         </ul>
     </nav>
+    
+    <section id="contenidoPrincipal">
+        <h2>Explora nuestro contenido</h2>
+        <p>Haz clic en los botones del menú para ver más información.</p>
+    </section>
     
     <div id="ventanaEmergente" class="modal oculto">
         <div class="modal-contenido">
@@ -41,7 +55,50 @@
         </form>
         <div id="resultado"></div>
     </section>
-
+    
+    <section id="galeria">
+        <h2>Galería</h2>
+        <div class="imagenes">
+            <img src="img1.jpg" alt="Imagen 1">
+            <img src="img2.jpg" alt="Imagen 2">
+            <img src="img3.jpg" alt="Imagen 3">
+        </div>
+    </section>
+    
+    <section id="testimonios">
+        <h2>Testimonios</h2>
+        <div class="testimonio">
+            <p>"Excelente servicio y atención al cliente. 100% recomendado."</p>
+            <span>- Juan Pérez</span>
+        </div>
+        <div class="testimonio">
+            <p>"Un equipo profesional y con gran calidad humana."</p>
+            <span>- María González</span>
+        </div>
+    </section>
+    
+    <section id="faq">
+        <h2>Preguntas Frecuentes</h2>
+        <details>
+            <summary>¿Cómo puedo contactarlos?</summary>
+            <p>Puedes enviarnos un mensaje a través del formulario de contacto.</p>
+        </details>
+        <details>
+            <summary>¿Dónde están ubicados?</summary>
+            <p>Nos encontramos en la ciudad, consulta la sección de ubicación.</p>
+        </details>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Ejemplo Web. Todos los derechos reservados.</p>
+        <div class="redes-sociales">
+            <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+            <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+            <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+        </div>
+    </footer>
+    
     <script src="script.js"></script>
 </body>
 </html>
+
