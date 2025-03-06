@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aventura Espacial</title>
+  <title>Café Literario</title>
   <style>
     /* Reset de estilos */
     * {
@@ -13,12 +13,12 @@
     }
     body {
       font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      color: #333;
       line-height: 1.6;
-      color: #fff;
-      background: #000;
     }
     header {
-      background: rgba(0, 0, 0, 0.8);
+      background: #6b4f4f;
       padding: 20px;
       text-align: center;
     }
@@ -35,7 +35,7 @@
       font-weight: bold;
     }
     .hero {
-      background: url('https://source.unsplash.com/1600x900/?space,galaxy') no-repeat center center/cover;
+      background: url('https://source.unsplash.com/1600x900/?coffee,books') no-repeat center center/cover;
       height: 100vh;
       display: flex;
       align-items: center;
@@ -47,16 +47,20 @@
     .hero h1 {
       font-size: 4em;
       margin-bottom: 20px;
+      color: #fff;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
     }
     .hero p {
       font-size: 1.5em;
       max-width: 600px;
       margin-bottom: 30px;
+      color: #fff;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
     }
     .btn {
       display: inline-block;
       padding: 15px 30px;
-      background: #ff6f61;
+      background: #c79a8e;
       color: #fff;
       border-radius: 5px;
       text-decoration: none;
@@ -64,19 +68,52 @@
       transition: background 0.3s;
     }
     .btn:hover {
-      background: #ff4c3b;
+      background: #a67a73;
     }
     section {
       padding: 60px 20px;
       text-align: center;
     }
+    section:nth-of-type(odd) {
+      background: #f9f9f9;
+    }
     section:nth-of-type(even) {
-      background: #111;
+      background: #fff;
     }
     footer {
-      background: #000;
+      background: #6b4f4f;
+      color: #fff;
       padding: 20px;
       text-align: center;
+    }
+    /* Estilos para formularios */
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: left;
+    }
+    form label {
+      font-weight: bold;
+    }
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    form button {
+      background: #c79a8e;
+      color: #fff;
+      border: none;
+      padding: 15px 30px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    form button:hover {
+      background: #a67a73;
     }
   </style>
 </head>
@@ -87,7 +124,7 @@
       <ul>
         <li><a href="#inicio">Inicio</a></li>
         <li><a href="#acerca">Acerca</a></li>
-        <li><a href="#caracteristicas">Características</a></li>
+        <li><a href="#menu">Menú</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
     </nav>
@@ -95,39 +132,50 @@
 
   <!-- Sección principal (hero) -->
   <section class="hero" id="inicio">
-    <h1>Aventura Espacial</h1>
-    <p>Embárcate en un viaje intergaláctico hacia lo desconocido. Descubre nuevos mundos y desafía los límites de la exploración espacial.</p>
-    <a href="#contacto" class="btn">Únete a la aventura</a>
+    <h1>Café Literario</h1>
+    <p>Un espacio donde el aroma del café se fusiona con el placer de la lectura. Descubre un rincón especial para inspirarte.</p>
+    <a href="#contacto" class="btn">Contáctanos</a>
   </section>
 
   <!-- Sección Acerca de -->
   <section id="acerca">
     <h2>Acerca de Nosotros</h2>
-    <p>Somos pioneros en aventuras espaciales, ofreciendo experiencias únicas y memorables que te transportarán a universos paralelos y galaxias lejanas.</p>
+    <p>En Café Literario combinamos la pasión por el café y la literatura, creando un ambiente único para disfrutar, aprender y conectar.</p>
   </section>
 
-  <!-- Sección de Características -->
-  <section id="caracteristicas">
-    <h2>Características</h2>
-    <p>Nuestras misiones incluyen:</p>
+  <!-- Sección Menú -->
+  <section id="menu">
+    <h2>Nuestro Menú</h2>
+    <p>Disfruta de una variedad de bebidas y delicias:</p>
     <ul style="list-style: none;">
-      <li>Exploración de planetas desconocidos</li>
-      <li>Tecnología de vanguardia</li>
-      <li>Aventuras personalizadas</li>
-      <li>Experiencias de inmersión total</li>
+      <li>Café Especial de la Casa</li>
+      <li>Variedades de Té e Infusiones</li>
+      <li>Dulces y Repostería Artesanal</li>
+      <li>Selección de Libros y Revistas</li>
     </ul>
   </section>
 
-  <!-- Sección de Contacto -->
+  <!-- Sección de Contacto con formulario -->
   <section id="contacto">
     <h2>Contacto</h2>
-    <p>¿Listo para despegar? Contáctanos y descubre cómo puedes ser parte de esta aventura única.</p>
-    <a href="mailto:info@aventuraespacial.com" class="btn">Contáctanos</a>
+    <p>Déjanos un mensaje y te responderemos a la brevedad:</p>
+    <form action="#" method="post">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Tu email" required>
+
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje" rows="5" required></textarea>
+
+      <button type="submit">Enviar Mensaje</button>
+    </form>
   </section>
 
   <!-- Pie de página -->
   <footer>
-    <p>&copy; 2025 Aventura Espacial. Todos los derechos reservados.</p>
+    <p>&copy; 2025 Café Literario. Todos los derechos reservados.</p>
   </footer>
 </body>
 </html>
