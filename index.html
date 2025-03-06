@@ -1,1 +1,133 @@
-hola mundo
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aventura Espacial</title>
+  <style>
+    /* Reset de estilos */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #fff;
+      background: #000;
+    }
+    header {
+      background: rgba(0, 0, 0, 0.8);
+      padding: 20px;
+      text-align: center;
+    }
+    nav ul {
+      list-style: none;
+    }
+    nav ul li {
+      display: inline-block;
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .hero {
+      background: url('https://source.unsplash.com/1600x900/?space,galaxy') no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      padding: 0 20px;
+    }
+    .hero h1 {
+      font-size: 4em;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 1.5em;
+      max-width: 600px;
+      margin-bottom: 30px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 15px 30px;
+      background: #ff6f61;
+      color: #fff;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 1em;
+      transition: background 0.3s;
+    }
+    .btn:hover {
+      background: #ff4c3b;
+    }
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+    section:nth-of-type(even) {
+      background: #111;
+    }
+    footer {
+      background: #000;
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <!-- Encabezado y navegación -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#acerca">Acerca</a></li>
+        <li><a href="#caracteristicas">Características</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Sección principal (hero) -->
+  <section class="hero" id="inicio">
+    <h1>Aventura Espacial</h1>
+    <p>Embárcate en un viaje intergaláctico hacia lo desconocido. Descubre nuevos mundos y desafía los límites de la exploración espacial.</p>
+    <a href="#contacto" class="btn">Únete a la aventura</a>
+  </section>
+
+  <!-- Sección Acerca de -->
+  <section id="acerca">
+    <h2>Acerca de Nosotros</h2>
+    <p>Somos pioneros en aventuras espaciales, ofreciendo experiencias únicas y memorables que te transportarán a universos paralelos y galaxias lejanas.</p>
+  </section>
+
+  <!-- Sección de Características -->
+  <section id="caracteristicas">
+    <h2>Características</h2>
+    <p>Nuestras misiones incluyen:</p>
+    <ul style="list-style: none;">
+      <li>Exploración de planetas desconocidos</li>
+      <li>Tecnología de vanguardia</li>
+      <li>Aventuras personalizadas</li>
+      <li>Experiencias de inmersión total</li>
+    </ul>
+  </section>
+
+  <!-- Sección de Contacto -->
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>¿Listo para despegar? Contáctanos y descubre cómo puedes ser parte de esta aventura única.</p>
+    <a href="mailto:info@aventuraespacial.com" class="btn">Contáctanos</a>
+  </section>
+
+  <!-- Pie de página -->
+  <footer>
+    <p>&copy; 2025 Aventura Espacial. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
